@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexia Fontaine - Chargée de Formation Axiane</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2a6d81;
+            --secondary: #1d4954;
+            --light: #f6f9fc;
+            --dark: #334756;
+            --accent: #90c5b5;
+            --accent-light: #c9dfd6;
+            --accent-dark: #336b78;
+            --text: #333;
+            --text-light: #666;
+            --shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text);
+            line-height: 1.7;
+            background-color: var(--light);
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            color: var(--dark);
+            letter-spacing: 0.3px;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        h2:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent);
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        p {
+            margin-bottom: 1.2rem;
+            font-size: 1rem;
+            color: var(--text);
+        }
+        
+        a {
+            color: var(--accent-dark);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        a:hover {
+            color: var(--accent);
+        }
+        
+        /* Container & Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+        
+        .section {
+            padding: 70px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .section-alternate {
+            background-color: white;
+        }
+        
+        .section-title-container {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+            z-index: 1;
+        }
+        
+        .section-title:after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .section-subtitle {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            color: var(--accent-dark);
+            font-weight: 400;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            padding: 100px 0 70px;
+        }
+        
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .header-title {
+            color: white;
+            margin-bottom: 1rem;
+        }
+        
+        .header-subtitle {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+        
+        .header-cta {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 500;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            letter-spacing: 1px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-cta:hover {
+            background-color: var(--accent-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            color: white;
+        }
+        
+        /* About */
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .about-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+        
+        .about-text {
+            flex: 2;
+            min-width: 300px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 500;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            letter-spacing: 1px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn:hover {
+            background-color: var(--accent-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            color: white;
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, auto);
+            gap: 30px;
+        }
+        
+        @media (max-width: 768px) {
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .skill-category {
+            background-color: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .skill-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .skill-category h3 {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .skill-category h3 i {
+            margin-right: 15px;
+            color: var(--accent);
+        }
+        
+        .skill-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .skill-list li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .skill-list li:before {
+            content: '✓';
+            color: var(--accent-dark);
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        
+        /* Projects */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .project-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .project-content {
+            padding: 25px;
+        }
+        
+        .project-title {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+        
+        .tag {
+            background-color: var(--accent-light);
+            color: var(--dark);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            transition: var(--transition);
+        }
+        
+        /* Experience Timeline */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+        
+        .timeline:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 2px;
+            background-color: var(--accent-light);
+            transform: translateX(-50%);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 40px;
+            display: flex;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+        
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .timeline-content {
+            width: 45%;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+        
+        .timeline-content:before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            transform: rotate(45deg);
+            z-index: -1;
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-content:before {
+            right: -10px;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-content:before {
+            left: -10px;
+        }
+        
+        .timeline-dot {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            background-color: var(--accent);
+            border: 4px solid var(--accent-light);
+            border-radius: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+        
+        .timeline-date {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 10px;
+        }
+        
+        .timeline-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        
+        /* Fit For Role Section */
+        .fit-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .fit-item {
+            background-color: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .fit-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .fit-item i {
+            font-size: 2rem;
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+        
+        .fit-item h3 {
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+        
+        /* Mission section */
+        .mission-flow {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .mission-step {
+            background-color: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: var(--shadow);
+            flex: 1;
+            min-width: 250px;
+            max-width: 350px;
+            position: relative;
+            transition: var(--transition);
+        }
+        
+        .mission-step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .mission-step:not(:last-child):after {
+            content: '→';
+            position: absolute;
+            right: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            color: var(--accent);
+        }
+        
+        @media (max-width: 768px) {
+            .mission-step:not(:last-child):after {
+                content: '↓';
+                position: absolute;
+                bottom: -25px;
+                left: 50%;
+                top: auto;
+                right: auto;
+                transform: translateX(-50%);
+            }
+        }
+        
+        .mission-icon {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-item i {
+            margin-right: 10px;
+            color: var(--accent);
+        }
+        
+        /* Project Large Card */
+        .project-card-large {
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            margin-bottom: 40px;
+        }
+        
+        .project-card-large:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-card-content {
+            display: flex;
+            flex-direction: row;
+        }
+        
+        .project-card-image {
+            flex: 1;
+            min-width: 300px;
+            max-width: 400px;
+            height: auto;
+            object-fit: cover;
+        }
+        
+        .project-card-text {
+            flex: 2;
+            padding: 30px;
+        }
+        
+        .project-card-header {
+            background-color: var(--primary);
+            color: white;
+            padding: 15px 30px;
+        }
+        
+        .project-card-title {
+            margin: 0;
+            color: white;
+        }
+        
+        .project-results {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid var(--accent-light);
+        }
+        
+        .result-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .result-icon {
+            width: 30px;
+            height: 30px;
+            background-color: var(--accent-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .result-icon i {
+            color: var(--primary);
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive */
+        @media screen and (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .timeline:before {
+                left: 30px;
+            }
+            
+            .timeline-item {
+                flex-direction: row !important;
+            }
+            
+            .timeline-content {
+                width: calc(100% - 60px);
+                margin-left: 60px;
+            }
+            
+            .timeline-item:nth-child(odd) .timeline-content:before,
+            .timeline-item:nth-child(even) .timeline-content:before {
+                left: -10px;
+                right: auto;
+            }
+            
+            .timeline-dot {
+                left: 30px;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .project-card-content {
+                flex-direction: column;
+            }
+            
+            .project-card-image {
+                max-width: 100%;
+            }
+        }
+        
+        /* Navigation */
+        nav {
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin: 0;
+            padding: 15px 0;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+            padding: 5px 0;
+        }
+        
+        nav a:hover {
+            color: var(--accent);
+        }
+        
+        nav a:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent);
+            transition: width 0.3s;
+        }
+        
+        nav a:hover:after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <h1 class="header-title">Alexia Fontaine</h1>
+            <p class="header-subtitle">Ingénierie Pédagogique | Formation | Communication Numérique</p>
+            <p class="header-subtitle">Candidate au poste de Chargée de Formation chez Axiane Formation</p>
+            <a href="#contact" class="header-cta">Me contacter</a>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#about">Présentation</a></li>
+                <li><a href="#skills">Compétences</a></li>
+                <li><a href="#missions">Missions</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#experience">Expérience</a></li>
+                <li><a href="#fit">Adéquation</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Présentation -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-title-container">
+                <p class="section-subtitle">Présentation</p>
+                <h2 class="section-title">Qui suis-je?</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="/img/AF-Profil6.jpg" alt="Alexia Fontaine">
+                </div>
+                <div class="about-text">
+                    <h3>L'Ingénierie Pédagogique & la Formation Professionnelle</h3>
+                    <p>Titulaire d'un Master 2 en Humanités numériques spécialisé en gestion des connaissances et ingénierie pédagogique, j'ai développé une expertise dans la conception et l'administration de formations, particulièrement dans des environnements exigeants comme le secteur médical.</p>
+                    
+                    <p>Ma récente formation en analyse de données (2023) me permet d'avoir une vision globale et stratégique dans la mise en place d'outils de formation et de suivi, en comprenant les enjeux tant techniques que métier de ces déploiements.</p>
+                    
+                    <p>Mon expérience au Centre Hospitalier de Dreux m'a permis de développer des compétences essentielles dans la gestion des services numériques (LMS) et l'accompagnement des utilisateurs, particulièrement dans des domaines où la rigueur et la qualité sont primordiales.</p>
+                    
+                    <p>Ma passion pour la transmission des connaissances et la médiation numérique se traduit également par l'animation d'un blog scientifique (carnet Hypothèses) et la création d'une newsletter hebdomadaire automatisée, démontrant ma capacité à vulgariser et partager des connaissances techniques.</p>
+                    
+                    <p>Cette candidature au poste de Chargée de Formation chez Axiane Formation représente pour moi l'opportunité idéale de mettre ces compétences au service de vos formations en comptabilité, cinéma et audiovisuel, dans un environnement que vous décrivez comme convivial et propice au développement professionnel.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compétences -->
+    <section class="section section-alternate" id="skills">
+        <div class="container">
+            <div class="section-title-container">
+                <p class="section-subtitle">Expertise</p>
+                <h2 class="section-title">Compétences Clés</h2>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-graduation-cap"></i> Formation & Développement</h3>
+                    <ul class="skill-list">
+                        <li>Analyse des besoins en formation (EC, audit, paie, juridique)</li>
+                        <li>Conception de parcours de formation adaptés aux cibles</li>
+                        <li>Animation de formations présentielles et distancielles</li>
+                        <li>Évaluation et amélioration continue des dispositifs</li>
+                        <li>Maîtrise des critères qualité (Qualiopi)</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3><i class="fas fa-laptop-code"></i> Outils Numériques & E-learning</h3>
+                    <ul class="skill-list">
+                        <li>Administration de LMS (Moodle, 360Learning)</li>
+                        <li>Création de modules e-learning interactifs</li>
+                        <li>Développement de supports multimédias (vidéos, podcasts)</li>
+                        <li>Maîtrise d'Excel et outils bureautiques</li>
+                        <li>Gestion de bases de données (SQL)</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3><i class="fas fa-chart-line"></i> Gestion & Organisation</h3>
+                    <ul class="skill-list">
+                        <li>Planification et organisation de formations</li>
+                        <li>Gestion de portefeuille clients et stagiaires</li>
+                        <li>Veille réglementaire et sectorielles</li>
+                        <li>Suivi et évaluation des formations</li>
+                        <li>Gestion des priorités et du stress</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3><i class="fas fa-users"></i> Communication & Commercial</h3>
+                    <ul class="skill-list">
+                        <li>Prospection et développement commercial</li>
+                        <li>Fidélisation de portefeuille clients</li>
+                        <li>Négociation commerciale</li>
+                        <li>Promotion des formations</li>
+                        <li>Animation d'un blog scientifique et newsletter (GitHub)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Missions -->
+    <section class="section" id="missions">
+        <div class="container">
+            <div class="section-title-container">
+                <p class="section-subtitle">Objectifs</p>
+                <h2 class="section-title">Missions du Poste</h2>
+            </div>
+
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 30px;">Le poste de Chargée de Formation chez Axiane Formation implique plusieurs missions stratégiques autour du développement et de l'administration de l'offre de formations pour les directeurs financiers, experts-comptables et commissaires aux comptes.</p>
+
+            <div class="mission-flow">
+                <div class="mission-step">
+                    <i class="fas fa-search mission-icon"></i>
+                    <h3>Prospection & Analyse</h3>
+                    <p>Prospecter, développer et fidéliser un portefeuille de stagiaires et d'entreprises, tout en analysant les besoins spécifiques en formation (EC, audit, paie, juridique).</p>
+                </div>
+                
+                <div class="mission-step">
+                    <i class="fas fa-cogs mission-icon"></i>
+                    <h3>Conception & Planification</h3>
+                    <p>Construire, planifier et organiser les projets de formation, en définissant les contenus adaptés aux cibles visées et aux différents formats (présentiel, e-learning, vidéos).</p>
+                </div>
+                
+                <div class="mission-step">
+                    <i class="fas fa-bullhorn mission-icon"></i>
+                    <h3>Promotion & Commercial</h3>
+                    <p>Promouvoir les formations, assurer la négociation commerciale et développer le portefeuille clients pour augmenter la visibilité des formations.</p>
+                </div>
+            </div>
+
+            <div class="mission-flow">
+                <div class="mission-step">
+                    <i class="fas fa-users-cog mission-icon"></i>
+                    <h3>Gestion & Coordination</h3>
+                    <p>Gérer les formations et les formateurs, coordonner les différents intervenants et s'assurer du bon déroulement des sessions.</p>
+                </div>
+                
+                <div class="mission-step">
+                    <i class="fas fa-chart-bar mission-icon"></i>
+                    <h3>Veille & Innovation</h3>
+                    <p>Faire de la veille sur les actualités et nouvelles lois pour adapter en permanence l'offre de formation aux évolutions du secteur.</p>
+                </div>
+                
+                <div class="mission-step">
+                    <i class="fas fa-award mission-icon"></i>
+                    <h3>Qualité & Certification</h3>
+                    <p>Assurer le respect des critères qualité Qualiopi et maintenir l'excellence des formations proposées par Axiane Formation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projets -->
+    <section class="section section-alternate" id="projects">
+        <div class="container">
+            <div class="section-title-container">
+                <p class="section-subtitle">Réalisations</p>
+                <h2 class="section-title">Projets Significatifs</h2>
+            </div>
+            
+            <!-- Projet 1 -->
+            <div class="project-card-large">
+                <div class="project-card-header">
+                    <h3 class="project-card-title">Gestion LMS & Formation des Utilisateurs</h3>
+                </div>
+                <div class="project-card-content">
+                    <img src="./img/suivi_pedago.png" alt="Gestion LMS" class="project-card-image">
+                    <div class="project-card-text">
+                        <div class="project-tags" style="margin-bottom: 20px;">
+                            <span class="tag">LMS</span>
+                            <span class="tag">Formation</span>
+                            <span class="tag">Accompagnement</span>
+                            <span class="tag">Change Management</span>
+                        </div>
+                        
+                        <p><strong>Contexte :</strong> Gestion du système de gestion de l'apprentissage (LMS - Moodle) pour la formation continue des soignants à l'IFSI Dreux.</p>
+                        
+                        <p><strong>Mission :</strong> Gestion et administration de la plateforme, création de parcours de formation et accompagnement des utilisateurs dans la prise en main du nouvel outil.</p>
+                        
+                        <p><strong>Actions :</strong> Administration de la plateforme LMS, formation des administrateurs et formateurs, création de guides utilisateurs, animation d'ateliers de prise en main, suivi personnalisé des apprenants, analyse des usages pour amélioration continue.</p>
+                        
+                        <a href="https://suivi-pedago.streamlit.app/" class="btn" style="margin-right: 10px; margin-bottom: 10px;">Voir la démo</a> Un exemple de suivi des formations.
+
+                        <div class="project-results">
+                            <h4>Résultats obtenus :</h4>
+                            <div class="result-item">
+                                <div class="result-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <p>Formation de plus de 200 utilisateurs sur 6 mois</p>
+                            </div>
+                            <div class="result-item">
+                                <div class="result-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <p>Augmentation du taux de participation aux formations</p>
+                            </div>
+                            <div class="result-item">
+                                <div class="result-icon">
+                                    <i class="fas fa-thumbs-up"></i>
+                                </div>
+                                <p>Satisfaction utilisateur </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projet 2 -->
+            <div class="project-card-large">
+                <div class="project-card-header">
+                    <h3 class="project-card-title">Newsletter Technique Automatisée</h3>
+                </div>
+                <div class="project-card-content">
+                    <img src="/img/Process_COPE.png" alt="Newsletter Technique" class="project-card-image">
+                    <div class="project-card-text">
+                        <div class="project-tags" style="margin-bottom: 20px;">
+                            <span class="tag">Markdown</span>
+                            <span class="tag">GitHub</span>
+                            <span class="tag">Automation</span>
+                            <span class="tag">Communication</span>
+                        </div>
+                        
+                        <p><strong>Contexte :</strong> Besoin de maintenir les équipes informées des évolutions techniques et des bonnes pratiques de manière régulière et efficace.</p>
+                        
+                        <p><strong>Mission :</strong> Création d'une newsletter hebdomadaire automatisée pour partager les actualités, astuces et nouveaux développements concernant les outils et formations.</p>
+                        
+                        <p><strong>Actions :</strong> Mise en place d'une architecture modulaire avec écriture en Markdown, développement d'un système d'automatisation de génération de contenus depuis les dépôts GitHub, création de templates adaptés aux différents types de contenus, mise en place d'un système de feedback et d'analyse d'engagement.</p>
+                        <a href="https://siasia-dev.github.io/portfolio-newsletter/latest.html" class="btn" style="margin-right: 10px; margin-bottom: 10px;">Voir la démo</a> Un exemple de suivi des formations.
+
+                        <div class="project-results">
+                            <h4>Résultats obtenus :</h4>
+                            <div class="result-item">
+                                <div class="result-icon">
+                                    <i class="fas fa-eye"></i>
+                                </div>
+                                <p>Taux d'ouverture moyen de 68% (vs. 25% pour l'ancienne version)</p>
+                            </div>
+                            <div class="result-item">
+                                <div class="result-icon">
+                                    <i class="fas fa-robot"></i>
+                                </div>
+                                <p>Gain de productivité dans la création des contenus</p>
+                            </div>
+                            <div class="result-item">
+                                <div class="result-icon">
+                                    <i class="fas fa-lightbulb"></i>
+                                </div>
+                                <p>Augmentation significative du partage d'information entre équipes</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Projet 3 -->
+            <div class="project-card-large">
+                <div class="project-card-header">
+                    <h3 class="project-card-title">Analyse de Performance et Reporting pour la Formation</h3>
+                </div>
+                <div class="project-card-content">
+                    <img src="/api/placeholder/400/300" alt="Analyse de Performance" class="project-card-image">
+                    <div class="project-card-text">
+                        <div class="project-tags" style="margin-bottom: 20px;">
+                            <span class="tag">Analyse de données</span>
+                            <span class="tag">Tableaux de bord</span>
+                            <span class="tag">Indicateurs de performance</span>
+                            <span class="tag">Aide à la décision</span>
+                        </div>
+                        
+                        <p><strong>Contexte :</strong> Suite à ma formation récente en analyse de données (2023), je suis en capcité de mettre en place un système de suivi et d'analyse de performance pour un centre de formation.</p>
+                        
+                        <p><strong>Mission :</strong> Développer des outils d'aide à la décision pour optimiser la rentabilité des formations et faciliter le pilotage stratégique.</p>
+                        
+                        <p><strong>Actions :</strong> Création de tableaux de bord de suivi, établissement d'indicateurs clés de performance (KPI), analyse des coûts par formation, mise en place d'un suivi de satisfaction client, formation des responsables à l'utilisation des tableaux de bord.</p>
+                        
+                        <div class="project-results">
+                            <h4>Résultats envisagés :</h4>
+                            <div class="result-item">
+                                <div class="result-icon">
+                                    <i class="fas fa-chart-pie"></i>
+                                </div>
+                                <p>Création d'un tableau de bord de pilotage stratégique</p>
+                            </div>
+                            <div class="result-item">
+                                <div class="result-icon">
+                                    <i class="fas fa-bullseye"></i>
+                                </div>
+                                <p>Identification des formations les plus rentables</p>
+                            </div>
+                            <div class="result-item">
+                                <div class="result-icon">
+                                    <i class="fas fa-thumbs-up"></i>
+                                </div>
+                                <p>Amélioration de la prise de décision basée sur les données</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>     
+
+    <!-- Expérience Professionnelle -->
+    <section class="section" id="experience">
+        <div class="container">
+            <div class="section-title-container">
+                <p class="section-subtitle">Parcours</p>
+                <h2 class="section-title">Expérience Professionnelle</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <p class="timeline-date">2024</p>
+                        <h3 class="timeline-title">Assistante de ressources documentaires</h3>
+                        <p>FNSEA</p>
+                        <ul>
+                            <li>Automatisation de chaîne logistique</li>
+                            <li>Collecte et exploitation des ressources documentaires</li>
+                            <li>Veille et curation de contenus spécialisés</li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <p class="timeline-date">2023 (Sept - Nov)</p>
+                        <h3 class="timeline-title">Assistante de ressources documentaires</h3>
+                        <p>THALES</p>
+                        <ul>
+                            <li>Extraction et transformation de données</li>
+                            <li>Création et mise à jour des bases de données</li>
+                            <li>Formation des utilisateurs aux outils documentaires</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <p class="timeline-date">2021 - 2022</p>
+                        <h3 class="timeline-title">Ingénieure Pédagogique / Conceptrice de contenus</h3>
+                        <p>Centre Hospitalier de Dreux</p>
+                        <ul>
+                            <li>Administration de LMS et création de parcours de formation</li>
+                            <li>Conception de modules e-learning et supports pédagogiques</li>
+                            <li>Animation de formations et accompagnement des utilisateurs</li>
+                            <li>Développement d'applications web pour la formation</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <p class="timeline-date">2017</p>
+                        <h3 class="timeline-title">Conceptrice Pédagogique – Rédactrice Web</h3>
+                        <p>CULTUR'MOUV</p>
+                        <ul>
+                            <li>Analyse fonctionnelle et rédaction de documentation technique</li>
+                            <li>Conception de site et organisation éditoriale</li>
+                            <li>Administration de CMS</li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <p class="timeline-date">2009 - 2010</p>
+                        <h3 class="timeline-title">Assistante de ressources documentaires</h3>
+                        <p>INRAP / SERVICE RÉGIONAL DE LORRAINE / UNIVERSITÉ DE FRANCHE-COMTÉ</p>
+                        <ul>
+                            <li>Gestion et exploitation des ressources documentaires</li>
+                            <li>Mise en œuvre des systèmes de classement</li>
+                            <li>Médiation entre ressources documentaires et utilisateurs</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Adéquation avec le poste -->
+    <section class="section section-alternate" id="fit">
+        <div class="container">
+            <div class="section-title-container">
+                <p class="section-subtitle">Positionnement</p>
+                <h2 class="section-title">Adéquation avec le Poste</h2>
+            </div>
+            
+            <h3 style="text-align: center; margin-bottom: 30px;">Comment mes compétences répondent aux exigences d'Axiane Formation</h3>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 50px;">Le poste de Chargée de Formation chez Axiane Formation demande une combinaison unique de compétences techniques, pédagogiques et commerciales, ainsi qu'une aisance dans des domaines spécialisés comme la comptabilité et l'audiovisuel. Voici comment mon profil s'aligne parfaitement avec ces besoins :</p>
+            
+            <div class="fit-content">
+                <div class="fit-item">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Expertise en ingénierie pédagogique</h3>
+                    <p>Mon Master 2 en Humanités numériques spécialité Gestion des connaissances et formations (mention Très Bien) m'a donné une solide base théorique et pratique dans la conception et l'organisation de formations adaptées à différents publics et formats.</p>
+                </div>
+                
+                <div class="fit-item">
+                    <i class="fas fa-tools"></i>
+                    <h3>Maîtrise des outils numériques</h3>
+                    <p>Mon expérience en administration de LMS et CMS, ainsi que ma maîtrise d'Excel et des outils bureautiques, me permettent de développer efficacement des supports de formation variés (présentiel, e-learning, vidéos) comme demandé dans le poste.</p>
+                </div>
+                
+                <div class="fit-item">
+                    <i class="fas fa-users"></i>
+                    <h3>Compétences relationnelles</h3>
+                    <p>Mon parcours en médiation et accompagnement des utilisateurs m'a permis de développer une aisance relationnelle essentielle pour prospecter, développer et fidéliser un portefeuille de stagiaires et d'entreprises, comme requis dans votre offre.</p>
+                </div>
+                
+                <div class="fit-item">
+                    <i class="fas fa-search"></i>
+                    <h3>Veille et analyse des besoins</h3>
+                    <p>Ma pratique de la veille informationnelle et ma capacité à analyser les besoins en formation me permettront d'identifier les enjeux et les besoins en termes de formation dans vos domaines d'expertise (EC, audit, paie, juridique, cinéma, audiovisuel).</p>
+                </div>
+                
+                <div class="fit-item">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Organisation et gestion des priorités</h3>
+                    <p>Mon expérience en gestion documentaire et en organisation de formations m'a permis de développer une méthode et une organisation efficaces, ainsi qu'une bonne gestion du stress et des priorités, qualités que vous recherchez expressément.</p>
+                </div>
+                
+                <div class="fit-item">
+                    <i class="fas fa-certificate"></i>
+                    <h3>Sensibilité à la qualité</h3>
+                    <p>Ma connaissance des exigences de qualité (similaires à Qualiopi) et mon souci du détail me permettront de contribuer au maintien des standards d'excellence d'Axiane Formation, élément crucial mentionné dans votre offre.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-title-container">
+                <p class="section-subtitle">Contact</p>
+                <h2 class="section-title">Me Contacter</h2>
+            </div>
+            <div class="contact-content" style="text-align: center; max-width: 600px; margin: 0 auto;">
+                <p style="margin-bottom: 30px;">Je serais heureuse d'échanger avec vous sur ma candidature au poste de Chargée de Formation et de vous en dire plus sur ma motivation à rejoindre l'équipe d'Axiane Formation.</p>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>07.69.03.18.97</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>fontaine.alexia8@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>120 rue de Voves, 28630 Le Coudray</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-car"></i>
+                        <span>Permis B - Véhiculée</span>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 30px;">
+                    <a href="https://www.linkedin.com/in/alexiafontaine" target="_blank" class="header-cta" style="margin-right: 15px;">
+                        <i class="fab fa-linkedin" style="margin-right: 10px;"></i>LinkedIn
+                    </a>
+                    <a href="https://portfolio-af-v2.netlify.app/" target="_blank" class="header-cta">
+                        <i class="fas fa-briefcase" style="margin-right: 10px;"></i>Portfolio
+                    </a>
+                    <a href="https://hypotheses.org/alexiafontaine" target="_blank" class="header-cta" style="margin-top: 15px; display: inline-block;">
+                        <i class="fas fa-book" style="margin-right: 10px;"></i>Blog scientifique
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <p style="margin-bottom: 20px; color: white;">© 2025 Alexia Fontaine - Candidature Chargée de Formation Axiane</p>
+            <p style="color: rgba(255,255,255,0.7);">Conception et développement personnalisé avec ❤️</p>
+        </div>
+    </footer>
+</body>
+</html>
